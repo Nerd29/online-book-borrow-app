@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Lost Kingdom",
+    "author": "Emma Carter",
+    "description": "A thrilling story of a young explorer who uncovers the secrets of an ancient kingdom.",
+    "category": "Story",
+    "available_quantity": 12,
+    "image_url": "https://example.com/images/lost-kingdom.jpg"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Mastery",
+    "author": "David Miller",
+    "description": "A comprehensive guide to modern JavaScript development and best practices.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://example.com/images/javascript-mastery.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Mysteries of the Universe",
+    "author": "Sophia Green",
+    "description": "An engaging exploration of galaxies, black holes, and the wonders of space.",
+    "category": "Science",
+    "available_quantity": 15,
+    "image_url": "https://example.com/images/mysteries-universe.jpg"
+  },
+  {
+    "id": 4,
+    "title": "The Silent Forest",
+    "author": "Michael Brown",
+    "description": "A captivating tale of survival and friendship in an enchanted forest.",
+    "category": "Story",
+    "available_quantity": 10,
+    "image_url": "https://example.com/images/silent-forest.jpg"
+  },
+  {
+    "id": 5,
+    "title": "AI for Beginners",
+    "author": "Laura Wilson",
+    "description": "An introduction to artificial intelligence and machine learning concepts.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://example.com/images/ai-beginners.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Human Brain",
+    "author": "Robert Taylor",
+    "description": "Discover how the brain works, learns, and adapts throughout life.",
+    "category": "Science",
+    "available_quantity": 9,
+    "image_url": "https://example.com/images/human-brain.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Journey Beyond the Sea",
+    "author": "Olivia White",
+    "description": "An adventurous voyage across unknown oceans filled with mystery and danger.",
+    "category": "Story",
+    "available_quantity": 14,
+    "image_url": "https://example.com/images/journey-sea.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Cloud Computing Essentials",
+    "author": "James Anderson",
+    "description": "Learn the fundamentals of cloud platforms, deployment, and scalability.",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://example.com/images/cloud-computing.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Physics in Everyday Life",
+    "author": "Daniel Harris",
+    "description": "Understand how physics explains the world around us through practical examples.",
+    "category": "Science",
+    "available_quantity": 11,
+    "image_url": "https://example.com/images/physics-everyday-life.jpg"
+  },
+  {
+    "id": 10,
+    "title": "The Hidden Treasure",
+    "author": "Grace Walker",
+    "description": "A suspenseful story about a group of friends searching for a legendary treasure.",
+    "category": "Story",
+    "available_quantity": 13,
+    "image_url": "https://example.com/images/hidden-treasure.jpg"
+  },
+  {
+    "id": 11,
+    "title": "React in Action",
+    "author": "Ethan Scott",
+    "description": "A practical guide to building interactive web applications with React.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://example.com/images/react-action.jpg"
+  },
+  {
+    "id": 12,
+    "title": "The Science of Climate",
+    "author": "Natalie Evans",
+    "description": "An insightful look at climate systems, global warming, and environmental change.",
+    "category": "Science",
+    "available_quantity": 16,
+    "image_url": "https://example.com/images/science-climate.jpg"
+  }
+]
