@@ -6,7 +6,7 @@
     "description": "A thrilling story of a young explorer who uncovers the secrets of an ancient kingdom.",
     "category": "Story",
     "available_quantity": 12,
-    "image_url": "https://example.com/images/lost-kingdom.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780141321004-M.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "A comprehensive guide to modern JavaScript development and best practices.",
     "category": "Tech",
     "available_quantity": 8,
-    "image_url": "https://example.com/images/javascript-mastery.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781491950296-M.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "An engaging exploration of galaxies, black holes, and the wonders of space.",
     "category": "Science",
     "available_quantity": 15,
-    "image_url": "https://example.com/images/mysteries-universe.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780393609394-M.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "A captivating tale of survival and friendship in an enchanted forest.",
     "category": "Story",
     "available_quantity": 10,
-    "image_url": "https://example.com/images/silent-forest.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780064408639-M.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "An introduction to artificial intelligence and machine learning concepts.",
     "category": "Tech",
     "available_quantity": 6,
-    "image_url": "https://example.com/images/ai-beginners.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781617294631-M.jpg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "description": "Discover how the brain works, learns, and adapts throughout life.",
     "category": "Science",
     "available_quantity": 9,
-    "image_url": "https://example.com/images/human-brain.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780143118053-M.jpg"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "description": "An adventurous voyage across unknown oceans filled with mystery and danger.",
     "category": "Story",
     "available_quantity": 14,
-    "image_url": "https://example.com/images/journey-sea.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780375831003-M.jpg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "Learn the fundamentals of cloud platforms, deployment, and scalability.",
     "category": "Tech",
     "available_quantity": 7,
-    "image_url": "https://example.com/images/cloud-computing.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780596158040-M.jpg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "Understand how physics explains the world around us through practical examples.",
     "category": "Science",
     "available_quantity": 11,
-    "image_url": "https://example.com/images/physics-everyday-life.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780307463708-M.jpg"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "A suspenseful story about a group of friends searching for a legendary treasure.",
     "category": "Story",
     "available_quantity": 13,
-    "image_url": "https://example.com/images/hidden-treasure.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780439023528-M.jpg"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "description": "A practical guide to building interactive web applications with React.",
     "category": "Tech",
     "available_quantity": 5,
-    "image_url": "https://example.com/images/react-action.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781617293856-M.jpg"
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "description": "An insightful look at climate systems, global warming, and environmental change.",
     "category": "Science",
     "available_quantity": 16,
-    "image_url": "https://example.com/images/science-climate.jpg"
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780691149257-M.jpg"
   }
 ]
