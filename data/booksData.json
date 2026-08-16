@@ -6,7 +6,7 @@
     "description": "A thrilling story of a young explorer who uncovers the secrets of an ancient kingdom.",
     "category": "Story",
     "available_quantity": 12,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780141321004-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "A comprehensive guide to modern JavaScript development and best practices.",
     "category": "Tech",
     "available_quantity": 8,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9781491950296-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "An engaging exploration of galaxies, black holes, and the wonders of space.",
     "category": "Science",
     "available_quantity": 15,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780393609394-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop"
   },
   {
     "id": 4,
@@ -33,17 +33,17 @@
     "description": "A captivating tale of survival and friendship in an enchanted forest.",
     "category": "Story",
     "available_quantity": 10,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780064408639-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=500&auto=format&fit=crop"
   },
   {
-    "id": 5,
-    "title": "AI for Beginners",
-    "author": "Laura Wilson",
-    "description": "An introduction to artificial intelligence and machine learning concepts.",
-    "category": "Tech",
-    "available_quantity": 6,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9781617294631-M.jpg"
-  },
+  "id": 5,
+  "title": "AI for Beginners",
+  "author": "Laura Wilson",
+  "description": "An introduction to artificial intelligence and machine learning concepts.",
+  "category": "Tech",
+  "available_quantity": 6,
+  "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&auto=format&fit=crop"
+},
   {
     "id": 6,
     "title": "The Human Brain",
@@ -51,7 +51,7 @@
     "description": "Discover how the brain works, learns, and adapts throughout life.",
     "category": "Science",
     "available_quantity": 9,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780143118053-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=500&auto=format&fit=crop"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "description": "An adventurous voyage across unknown oceans filled with mystery and danger.",
     "category": "Story",
     "available_quantity": 14,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780375831003-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "Learn the fundamentals of cloud platforms, deployment, and scalability.",
     "category": "Tech",
     "available_quantity": 7,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780596158040-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "Understand how physics explains the world around us through practical examples.",
     "category": "Science",
     "available_quantity": 11,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780307463708-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=500&auto=format&fit=crop"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "description": "A suspenseful story about a group of friends searching for a legendary treasure.",
     "category": "Story",
     "available_quantity": 13,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780439023528-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500&auto=format&fit=crop"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "description": "A practical guide to building interactive web applications with React.",
     "category": "Tech",
     "available_quantity": 5,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9781617293856-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&auto=format&fit=crop"
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "description": "An insightful look at climate systems, global warming, and environmental change.",
     "category": "Science",
     "available_quantity": 16,
-    "image_url": "https://covers.openlibrary.org/b/isbn/9780691149257-M.jpg"
+    "image_url": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=500&auto=format&fit=crop"
   }
 ]

@@ -4,8 +4,7 @@ import React from 'react';
 
 const AllBooksPage = () => {
     return (
-        <main className="min-h-screen bg-slate-950 text-white">
-            
+        <main className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 transition-colors duration-300">
             <BooksPage />
         </main>
     );

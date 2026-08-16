@@ -1,35 +1,22 @@
-"use client"
+"use client";
 import React from 'react';
 import { Button } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const BooksCard = ({ book }) => {
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 flex flex-col group h-full">
+    <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 flex flex-col group h-full">
       
       {/* Cover Container */}
-      <div className="relative h-64 w-full bg-slate-950/80 overflow-hidden flex items-center justify-center p-4">
-        {/* Ambient Blurred Background */}
+      <div className="relative h-64 w-full bg-slate-100 dark:bg-slate-950 overflow-hidden">
         <Image 
           src={book.image_url} 
-          alt="" 
+          alt={book.title} 
           fill
-          priority={false}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover blur-2xl scale-125 opacity-40 pointer-events-none" 
+          className="object-cover transition-transform duration-300 group-hover:scale-105" 
         />
-        
-        {/* Main Book Cover */}
-        <div className="relative h-full w-full max-w-[160px] shadow-2xl rounded overflow-hidden z-10 transition-transform duration-300 group-hover:scale-105">
-          <Image 
-            src={book.image_url} 
-            alt={book.title} 
-            fill
-            priority={false}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-contain" 
-          />
-        </div>
       </div>
 
       {/* Card Content */}
@@ -39,14 +26,19 @@ const BooksCard = ({ book }) => {
             {book.title}
           </h3>
 
-          <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">
+          <p className="text-xs font-semibold text-slate-600 dark:text-slate-400 mt-1">
             {book.author}
           </p>
         </div>
 
-        <Button className="bg-green-500 hover:bg-green-600 text-white font-medium px-6 rounded-full transition-colors">
-          Book Details
-        </Button>
+        <Link
+          href={`/bookDetails/${book.id}`}
+          className="w-full flex justify-center"
+        >
+          <Button className="bg-green-500 hover:bg-green-600 text-white font-medium px-6 rounded-full transition-colors">
+            View Details
+          </Button>
+        </Link>
       </div>
     </div>
   );
