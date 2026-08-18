@@ -22,7 +22,7 @@ const BooksCard = ({ book }) => {
       {/* Card Content */}
       <div className="p-6 text-center flex-1 flex flex-col items-center justify-between">
         <div className="w-full mb-4">
-          <h3 className="font-bold text-lg text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
+          <h3 className="font-bold text-lg text-slate-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors line-clamp-1">
             {book.title}
           </h3>
 
