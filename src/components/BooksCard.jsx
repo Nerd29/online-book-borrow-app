@@ -2,21 +2,32 @@
 import React from 'react';
 import { Button } from '@heroui/react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 const BooksCard = ({ book }) => {
+  const router = useRouter();
+
+  // if (!book) return null;
+
+  
+
   return (
     <div className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-800 flex flex-col group h-full">
       
       {/* Cover Container */}
       <div className="relative h-64 w-full bg-slate-100 dark:bg-slate-950 overflow-hidden">
-        <Image 
-          src={book.image_url} 
-          alt={book.title} 
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-105" 
-        />
+        {book.image_url ? (
+          <Image 
+            src={book.image_url} 
+            alt={book.title || "Book cover"} 
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform duration-300 group-hover:scale-105" 
+          />
+        ) : (
+          <div className="flex items-center justify-center h-full text-4xl">📖</div>
+        )}
       </div>
 
       {/* Card Content */}
@@ -30,15 +41,15 @@ const BooksCard = ({ book }) => {
             {book.author}
           </p>
         </div>
-
-        <Link
-          href={`/bookDetails/${book.id}`}
-          className="w-full flex justify-center"
+        <Link href={`/bookDetails/${book.id}`}>
+        <Button 
+        
+          className="w-full bg-green-500 hover:bg-green-600 text-white font-medium px-6 rounded-full transition-colors"
         >
-          <Button className="bg-green-500 hover:bg-green-600 text-white font-medium px-6 rounded-full transition-colors">
-            View Details
-          </Button>
+          View Details
+        </Button>
         </Link>
+        
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const FeaturedBooks = () => {
       router.push('/login?redirectTo=/all-books');
     }
   };
-
+  
   // Take the top 4 books directly from the imported JSON file
   const featuredBooks = books.slice(0, 4);
 
@@ -120,7 +120,7 @@ const FeaturedBooks = () => {
               {/* View Details Button */}
               <div className="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800">
                 <Link href={`/bookDetails/${book._id || book.id}`}>
-                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-xl shadow-md shadow-emerald-600/10">
+                  <Button  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-xl shadow-md shadow-emerald-600/10">
                     View Details
                   </Button>
                 </Link>

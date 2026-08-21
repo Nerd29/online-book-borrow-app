@@ -11,7 +11,7 @@ import toast from 'react-hot-toast';
 
 export default function Login() {
   const [loading, setLoading] = useState(false);
-  // const [googleLoading, setGoogleLoading] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
   const router = useRouter();
 
   const onSubmit = async (e) => {
@@ -42,13 +42,14 @@ export default function Login() {
   };
   
 
-//   const handleGoogleSignIn = async () => {
-//     setGoogleLoading(true);
-//     await authClient.signIn.social({
-//       provider: "google",
-//       callbackURL: "/",
-//     });
-//   };
+  const handleGoogleSignIn = async () => {
+    setGoogleLoading(true);
+    const data= await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
+    console.log(data);
+  };
 
   return (
     <div className="min-h-[80vh] flex flex-col bg-slate-50 dark:bg-slate-950">
@@ -69,8 +70,8 @@ export default function Login() {
 
             <div className="space-y-4">
               <Button
-                // onClick={handleGoogleSignIn}
-                // isLoading={googleLoading}
+                onClick={handleGoogleSignIn}
+                isLoading={googleLoading}
                 variant="bordered"
                 className="w-full h-12 font-semibold rounded-2xl border-slate-200 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors gap-3"
               >
@@ -162,7 +163,7 @@ export default function Login() {
 
               <Button
                 type="submit"
-                // isLoading={loading}
+                isLoading={loading}
                 className="w-full h-14 text-[16px] font-black rounded-2xl shadow-xl shadow-green-600/20 group bg-green-600 text-white hover:bg-green-700"
               >
                 Log In{" "}

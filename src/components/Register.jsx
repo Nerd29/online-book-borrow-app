@@ -42,14 +42,14 @@ export default function Register() {
     }
   };
 
-  // const handleGoogleRegister = async () => {
-  //   setLoading(true);
-  //   await authClient.signIn.social({
-  //     provider: "google",
-  //     callbackURL: "/",
-  //   });
+  const handleGoogleRegister = async () => {
+    setLoading(true);
+    await authClient.signUp.social({
+      provider: "google",
+      callbackURL: "/",
+    });
     
-  // };
+  };
 
   return (
     <div className="min-h-[80vh] flex flex-col bg-slate-50 dark:bg-slate-950 py-12">
@@ -164,7 +164,7 @@ export default function Register() {
               {/* Create Account Button - always blue */}
               <Button
                 type="submit"
-                // isLoading={loading}
+                isLoading={loading}
                 className="w-full h-14 text-lg font-black rounded-2xl shadow-xl shadow-green-600/20 group bg-green-600 text-white hover:bg-green-700"
               >
                 Create Account{" "}
@@ -175,7 +175,7 @@ export default function Register() {
               <div className="space-y-4 pt-2">
                 <Button
                   type="button"
-                //   onClick={handleGoogleRegister}
+                  onClick={handleGoogleRegister}
                   variant="bordered"
                   className="w-full h-12 font-semibold rounded-2xl border-slate-200 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors gap-3"
                 >
