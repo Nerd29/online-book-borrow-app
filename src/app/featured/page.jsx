@@ -1,11 +1,29 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import books from '../../../data/booksData.json';
 import { Button } from '@heroui/react';
 import { motion } from 'framer-motion';
 
+// Import your auth context hook here (e.g., useAuth from '@/context/AuthContext')
+// import { useAuth } from '@/context/AuthContext';
+
 const FeaturedBooks = () => {
+  const router = useRouter();
+  
+  // Replace this placeholder with your actual auth state (e.g., const { user } = useAuth();)
+  const user = null; 
+
+  const handleExploreClick = () => {
+    if (user) {
+      router.push('/all-books');
+    } else {
+      // Redirects to login page (and optionally saves target page to redirect after login)
+      router.push('/login?redirectTo=/all-books');
+    }
+  };
+
   // Take the top 4 books directly from the imported JSON file
   const featuredBooks = books.slice(0, 4);
 
@@ -15,7 +33,7 @@ const FeaturedBooks = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.18, // Time delay between each book card appearing
+        staggerChildren: 0.18,
       },
     },
   };
@@ -48,11 +66,15 @@ const FeaturedBooks = () => {
               Featured Books
             </h2>
           </div>
-          <Link href="/all-books">
-            <Button variant="light" className="text-emerald-600 dark:text-emerald-400 font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-950/50">
-              Explore All Books ➔
-            </Button>
-          </Link>
+          
+          {/* Handled via onClick handler checking authentication */}
+          <Button 
+            onClick={handleExploreClick}
+            variant="light" 
+            className="text-emerald-600 dark:text-emerald-400 font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-950/50"
+          >
+            Explore All Books ➔
+          </Button>
         </div>
 
         {/* Animated Book Cards Grid */}

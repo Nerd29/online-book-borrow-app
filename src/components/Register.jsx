@@ -4,14 +4,15 @@ import { Button, Description, FieldError, Form, Input, Label, TextField } from '
 import Link from 'next/link';
 import { User, ArrowRight } from 'lucide-react';
 // import { authClient } from '@/lib/auth-client';
-// import toast from 'react-hot-toast';
-// import { useRouter } from 'next/navigation';
+import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-// import { useState } from 'react';
+import { authClient } from '@/lib/auth-client';
+import { useState } from 'react';
 
 export default function Register() {
-//   const router = useRouter();
-//   const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -26,28 +27,29 @@ export default function Register() {
       name: user.name,
       image: user.image,
     });
+    console.log("Registration response:", res, error);
 
-    // if (error) {
-    //   toast.error(error.message || "Registration failed!");
-    //   setLoading(false);
-    //   return;
-    // }
+    if (error) {
+      toast.error(error.message || "Registration failed!");
+      setLoading(false);
+      return;
+    }
 
-    // if (res) {
-    //   toast.success("Registration Successful!");
-    //   router.push("/login");
-    //   setLoading(false);
-    // }
+    if (res) {
+      toast.success("Registration Successful!");
+      router.push("/login");
+      setLoading(false);
+    }
   };
 
-//   const handleGoogleRegister = async () => {
-//     setLoading(true);
-//     await authClient.signIn.social({
-//       provider: "google",
-//       callbackURL: "/",
-//     });
+  // const handleGoogleRegister = async () => {
+  //   setLoading(true);
+  //   await authClient.signIn.social({
+  //     provider: "google",
+  //     callbackURL: "/",
+  //   });
     
-//   };
+  // };
 
   return (
     <div className="min-h-[80vh] flex flex-col bg-slate-50 dark:bg-slate-950 py-12">

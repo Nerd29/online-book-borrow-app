@@ -4,15 +4,15 @@ import { Button, Description, FieldError, Input, Label, TextField } from '@herou
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-// import { authClient } from '@/lib/auth-client';
-// import { useRouter } from 'next/navigation';
-// import { useState } from 'react';
-// import toast from 'react-hot-toast';
+import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 export default function Login() {
-//   const [loading, setLoading] = useState(false);
-//   const [googleLoading, setGoogleLoading] = useState(false);
-//   const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  // const [googleLoading, setGoogleLoading] = useState(false);
+  const router = useRouter();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -23,21 +23,21 @@ export default function Login() {
 
     console.log(user);
 
-    // const { data: res, error } = await authClient.signIn.email({
-    //   email: user.email,
-    //   password: user.password,
-    //   callbackURL: "/",
-    // });
+    const { data: res, error } = await authClient.signIn.email({
+      email: user.email,
+      password: user.password,
+      callbackURL: "/",
+    });
 
-    // console.log(res, error);
-    // if (res) {
-    //   toast.success("Login Successful");
-    //   router.push("/");
-    // } else {
-    //   toast.error("Invalid Email and Password");
-    // }
+    console.log(res, error);
+    if (res) {
+      toast.success("Login Successful");
+      router.push("/");
+    } else {
+      toast.error("Invalid Email and Password");
+    }
 
-    // setLoading(false);
+    setLoading(false);
 
   };
   
