@@ -3,7 +3,6 @@
 import { Button, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
 import Link from 'next/link';
 import { User, ArrowRight } from 'lucide-react';
-// import { authClient } from '@/lib/auth-client';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -13,6 +12,7 @@ import { useState } from 'react';
 export default function Register() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +27,6 @@ export default function Register() {
       name: user.name,
       image: user.image,
     });
-    console.log("Registration response:", res, error);
 
     if (error) {
       toast.error(error.message || "Registration failed!");
@@ -43,12 +42,17 @@ export default function Register() {
   };
 
   const handleGoogleRegister = async () => {
-    setLoading(true);
-    await authClient.signUp.social({
-      provider: "google",
-      callbackURL: "/",
-    });
-    
+    setGoogleLoading(true);
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: "/",
+      });
+    } catch (error) {
+      console.error("Google sign-up error:", error);
+      toast.error("Google registration failed");
+      setGoogleLoading(false);
+    }
   };
 
   return (
@@ -161,7 +165,7 @@ export default function Register() {
                 <FieldError />
               </TextField>
 
-              {/* Create Account Button - always blue */}
+              {/* Create Account Button */}
               <Button
                 type="submit"
                 isLoading={loading}
@@ -176,6 +180,7 @@ export default function Register() {
                 <Button
                   type="button"
                   onClick={handleGoogleRegister}
+                  isLoading={googleLoading}
                   variant="bordered"
                   className="w-full h-12 font-semibold rounded-2xl border-slate-200 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors gap-3"
                 >

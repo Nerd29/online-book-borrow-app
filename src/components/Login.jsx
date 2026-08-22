@@ -21,34 +21,34 @@ export default function Login() {
     const formData = new FormData(e.currentTarget);
     const user = Object.fromEntries(formData.entries());
 
-    console.log(user);
-
     const { data: res, error } = await authClient.signIn.email({
       email: user.email,
       password: user.password,
       callbackURL: "/",
     });
 
-    console.log(res, error);
     if (res) {
       toast.success("Login Successful");
       router.push("/");
     } else {
-      toast.error("Invalid Email and Password");
+      toast.error(error?.message || "Invalid Email and Password");
     }
 
     setLoading(false);
-
   };
-  
 
   const handleGoogleSignIn = async () => {
     setGoogleLoading(true);
-    const data= await authClient.signIn.social({
-      provider: "google",
-      callbackURL: "/",
-    });
-    console.log(data);
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: "/",
+      });
+    } catch (error) {
+      console.error("Google sign-in error:", error);
+      toast.error("Google sign-in failed");
+      setGoogleLoading(false);
+    }
   };
 
   return (
@@ -70,6 +70,7 @@ export default function Login() {
 
             <div className="space-y-4">
               <Button
+                type="button"
                 onClick={handleGoogleSignIn}
                 isLoading={googleLoading}
                 variant="bordered"
