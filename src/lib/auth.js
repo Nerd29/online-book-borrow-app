@@ -31,7 +31,6 @@ export const auth = betterAuth({
   trustedOrigins: [
     "http://localhost:3000",
     "https://online-book-borrow-app-git-main-turja1.vercel.app",
-    "https://online-book-borrow-3x57q0z95-turja1.vercel.app",
   ],
   emailAndPassword: {
     enabled: true,

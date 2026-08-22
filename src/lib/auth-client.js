@@ -1,7 +1,8 @@
 import { createAuthClient } from "better-auth/react";
 
 export const authClient = createAuthClient({
-  baseURL:  "https://online-book-borrow-app-git-main-turja1.vercel.app",
+ 
+  baseURL: process.env.NEXT_PUBLIC_APP_URL
 });
 
 export const { signIn, signUp, useSession } = authClient;
