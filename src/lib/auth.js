@@ -1,24 +1,39 @@
-import dns from "node:dns";
-dns.setServers(["8.8.8.8", "8.8.4.4"]);
-
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import { MongoClient } from "mongodb";
 import { betterAuth } from "better-auth";
-const client = new MongoClient(process.env.MONGODB_URI);
+
+const uri = process.env.MONGODB_URI;
+
+if (!uri) {
+  throw new Error("MONGODB_URI is not defined in environment variables.");
+}
+
+let client;
+let clientPromise;
+
+if (process.env.NODE_ENV === "development") {
+  // Reuse client across hot-reloads in development
+  if (!global._mongoClient) {
+    global._mongoClient = new MongoClient(uri);
+  }
+  client = global._mongoClient;
+} else {
+  client = new MongoClient(uri);
+}
+
 const db = client.db("book-bridge");
 
 export const auth = betterAuth({
- database: mongodbAdapter(db, {
-    // Optional: if you don't provide a client, database transactions won't be enabled.
+  database: mongodbAdapter(db, {
     client,
- }),
- emailAndPassword: { 
-    enabled: true, 
-  }, 
-     socialProviders:{
-    google:{
+  }),
+  emailAndPassword: {
+    enabled: true,
+  },
+  socialProviders: {
+    google: {
       clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET
-    }
-}
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    },
+  },
 });
